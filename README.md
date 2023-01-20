@@ -26,7 +26,7 @@ crictl pull alpine
 * ghcr.io -> harbor/ghcr.io
 
 ```toml
-# /etc/containerd/config.toml
+# vim /etc/containerd/config.toml
 version = 2
 
 [plugins."io.containerd.grpc.v1.cri".registry]
@@ -37,6 +37,8 @@ version = 2
       endpoint = ["http://10.121.218.184:30002/v2/quay.io"]
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."ghcr.io"]
       endpoint = ["http://10.121.218.184:30002/v2/ghcr.io"]
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."k8s.gcr.io"]
+      endpoint = ["registry.aliyuncs.com/google_containers"]
 
 [plugins."io.containerd.grpc.v1.cri".registry.configs."10.121.218.184:30002".tls]
   insecure_skip_verify = true
