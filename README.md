@@ -38,7 +38,7 @@ version = 2
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."ghcr.io"]
       endpoint = ["http://10.121.218.184:30002/v2/ghcr.io"]
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."k8s.gcr.io"]
-      endpoint = ["registry.aliyuncs.com/google_containers"]
+      endpoint = ["https://registry.aliyuncs.com/v2/google_containers"]
 
 [plugins."io.containerd.grpc.v1.cri".registry.configs."10.121.218.184:30002".tls]
   insecure_skip_verify = true
@@ -47,4 +47,11 @@ version = 2
   [plugins."io.containerd.grpc.v1.cri".registry.configs."10.121.218.184:30002".auth]
     username = "robot_readonly"
     password = 'npcCnfZicoeZTupZnX39ew9cfIvldyZV'
+```
+
+## 树莓派
+```shell
+hd install runc --arch armhf
+
+hd i k9s
 ```
