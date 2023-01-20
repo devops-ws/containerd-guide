@@ -52,6 +52,6 @@ version = 2
 ## 树莓派
 ```shell
 hd install runc --arch armhf
-
+hd i containernetworking/plugins
 hd i k9s
 ```
