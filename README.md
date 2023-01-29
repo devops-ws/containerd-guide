@@ -51,6 +51,17 @@ version = 2
     password = 'npcCnfZicoeZTupZnX39ew9cfIvldyZV'
 ```
 
+## Troubleshotting
+```
+cat <<EOF >/etc/crictl.yaml
+runtime-endpoint: unix:///run/containerd/containerd.sock
+image-endpoint: unix:///run/containerd/containerd.sock
+timeout: 2
+debug: true
+pull-image-on-create: false
+EOF
+```
+
 ## 树莓派
 ```shell
 hd install runc --arch armhf
