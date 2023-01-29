@@ -31,6 +31,8 @@ version = 2
 
 [plugins."io.containerd.grpc.v1.cri".registry]
   [plugins."io.containerd.grpc.v1.cri".registry.mirrors]
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."10.121.218.184:30002"]
+      endpoint = ["http://10.121.218.184:30002"]
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]
       endpoint = ["http://10.121.218.184:30002/v2/cache", "https://qtzsrp4m.mirror.aliyuncs.com/v2"]
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."quay.io"]
