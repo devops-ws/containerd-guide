@@ -40,7 +40,7 @@ version = 2
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."ghcr.io"]
       endpoint = ["http://10.121.218.184:30002/v2/ghcr.io"]
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."k8s.gcr.io"]
-      endpoint = ["https://registry.aliyuncs.com/v2/google_containers"]
+      endpoint = ["https://registry.k8s.io/v2"]
 
 [plugins."io.containerd.grpc.v1.cri".registry.configs."10.121.218.184:30002".tls]
   insecure_skip_verify = true
