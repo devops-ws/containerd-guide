@@ -51,6 +51,13 @@ version = 2
     password = 'npcCnfZicoeZTupZnX39ew9cfIvldyZV'
 ```
 
+## 镜像推送
+```shell
+ctr image pull registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:v1.8.0 --all-platforms
+ctr image tag registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:v1.8.0 10.121.218.184:30002/registry.k8s.io/coredns:v1.8.0
+ctr image push 10.121.218.184:30002/registry.k8s.io/coredns:v1.8.0 --plain-http --user user:pass
+```
+
 ## Troubleshotting
 ```
 cat <<EOF >/etc/crictl.yaml
